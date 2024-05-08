@@ -1,0 +1,11 @@
+<div id="<%= dom_id post %>">
+
+<div class="card" style="width: 18rem;">
+ <div class="card-header fw-bold"><%=post.user.email%></div>
+<%= image_tag post.images.last %>
+  <div class="card-body">
+    <h5 class="card-title"><%=post.caption%></h5>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
