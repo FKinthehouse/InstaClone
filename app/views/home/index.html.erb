@@ -1,1 +1,7 @@
-<h1>This is Instagram home page</h1>
+<h1>This is the homepage</h1>
+
+
+<% if current_user%>
+<h2>Welcome <%=current_user.email%></h2>
+<%=button_to "sign out", destroy_user_session_path, method: :delete%>
+<%end%>
