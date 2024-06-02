@@ -53,3 +53,12 @@ html {
     height: auto;
     margin-right: .5rem
   }  
+
+
+  .filepond--item {
+    width: calc(50% - 0.5em);
+}
+
+.filepond--root {
+  max-height: 30em;
+}

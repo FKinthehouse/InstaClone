@@ -5,3 +5,6 @@ import "bootstrap"
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+import "filepond"
+import "custom/custom"
+import "filepond-plugin-image-preview"

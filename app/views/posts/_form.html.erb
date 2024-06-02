@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
       <%= form_with(model: post) do |form| %>
     <div class="modal-content">
       <div class="modal-header">
@@ -9,7 +9,7 @@
       </div>
       <div class="modal-body d-flex">
             <div class="border-end border-secondary mx-2" style="width:60%">
-              <%= form.file_field :images, multiple: true %>
+              <%= form.file_field :images, multiple: true , id: "post-images"%>
             </div>
             
             <div style="width:40%">
@@ -39,22 +39,20 @@
                 <%=form.text_field :location, placeholder: "Add location", class: "form-control"%>
               </div>
          <div class="d-flex justify-content-between align-items-center border form-control my-2">
-          <p class="d-inline-flex gap-1 my-1">
             <a class="text-dark" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration:none;">
               Advanced Settings
             </a>
-            <i class="fa-solid fa-chevron-down"></i>
-          </p>
+            <i class="fa-solid fa-chevron-down"  data-bs-toggle="collapse" href="#collapseExample" role="button"></i>
         </div>  
           <div class="collapse" id="collapseExample">
             <div class="card card-body">
              <div class="form-check form-switch">
-              <%= form.check_box :allow_comments, class: "form-check-input", role:"switch"%>
+              <%= form.check_box :allow_comments, class: "form-check-input", role:"switch", checked: true%>
               <%= form.label :allow_comments, style: "display: block" , class: "form-check-label"%>
             </div>
 
               <div class="form-check form-switch">
-                <%= form.check_box :show_likes_count,  class: "form-check-input", role:"switch"%>
+                <%= form.check_box :show_likes_count,  class: "form-check-input", role:"switch", checked: true%>
                 <%= form.label :show_likes_count, style: "display: block" , class: "form-check-label"%>
               </div>
             </div>
